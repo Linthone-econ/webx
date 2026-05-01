@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BridgeX Cooperation — Research & Consulting</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <svg viewBox="0 0 100 100" class="loader-logo">
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle">BX</text>
+      </svg>
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark">BX</span>
+        <span class="logo-text">BridgeX <em>Cooperation</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-nav magnetic">Get Started</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal-up">
+          <span class="badge-dot"></span> Southeast Asia Research Experts
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line reveal-up" data-delay="0.1">Bridging Data</span>
+          <span class="title-line reveal-up" data-delay="0.2">to <span class="text-gradient">Decisions</span></span>
+          <span class="title-line reveal-up" data-delay="0.3">That Matter</span>
+        </h1>
+        <p class="hero-desc reveal-up" data-delay="0.4">
+          BridgeX Cooperation delivers rigorous research, field surveys, and strategic
+          insights to help organizations navigate complex markets with confidence.
+        </p>
+        <div class="hero-actions reveal-up" data-delay="0.5">
+          <a href="services.html" class="btn btn-primary magnetic">Explore Services</a>
+          <a href="about.html" class="btn btn-ghost magnetic">
+            <span>Our Story</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats reveal-up" data-delay="0.6">
+          <div class="stat">
+            <span class="stat-num" data-count="150">0</span><span class="stat-sym">+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="40">0</span><span class="stat-sym">+</span>
+            <span class="stat-label">Clients</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="12">0</span><span class="stat-sym">+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal-scale" data-delay="0.3">
+        <div class="hero-card glass-card">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="card-title-sm">Active Projects</span>
+          </div>
+          <div class="card-metric">
+            <span class="metric-val">24</span>
+            <span class="metric-badge up">+12%</span>
+          </div>
+          <div class="card-bars">
+            <div class="bar" style="--h:60%"></div>
+            <div class="bar" style="--h:80%"></div>
+            <div class="bar" style="--h:50%"></div>
+            <div class="bar" style="--h:90%"></div>
+            <div class="bar" style="--h:70%"></div>
+            <div class="bar" style="--h:85%"></div>
+            <div class="bar active" style="--h:95%"></div>
+          </div>
+        </div>
+        <div class="hero-card-sm glass-card float-1">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Field survey live</span>
+        </div>
+        <div class="hero-card-sm glass-card float-2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          <span>90% accuracy</span>
+        </div>
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- Marquee Clients -->
+  <section class="marquee-section">
+    <div class="marquee-label">Trusted by leading organizations</div>
+    <div class="marquee-track">
+      <div class="marquee-inner" id="marqueeInner">
+        <span>World Bank</span>
+        <span class="dot">·</span>
+        <span>Asian Development Bank</span>
+        <span class="dot">·</span>
+        <span>USAID</span>
+        <span class="dot">·</span>
+        <span>UNDP</span>
+        <span class="dot">·</span>
+        <span>GIZ</span>
+        <span class="dot">·</span>
+        <span>SwissContact</span>
+        <span class="dot">·</span>
+        <span>ILO</span>
+        <span class="dot">·</span>
+        <span>DFAT Australia</span>
+        <span class="dot">·</span>
+        <span>LuxDev</span>
+        <span class="dot">·</span>
+        <span>Oxfam</span>
+        <span class="dot">·</span>
+        <!-- Duplicate for seamless loop -->
+        <span>World Bank</span>
+        <span class="dot">·</span>
+        <span>Asian Development Bank</span>
+        <span class="dot">·</span>
+        <span>USAID</span>
+        <span class="dot">·</span>
+        <span>UNDP</span>
+        <span class="dot">·</span>
+        <span>GIZ</span>
+        <span class="dot">·</span>
+        <span>SwissContact</span>
+        <span class="dot">·</span>
+        <span>ILO</span>
+        <span class="dot">·</span>
+        <span>DFAT Australia</span>
+        <span class="dot">·</span>
+        <span>LuxDev</span>
+        <span class="dot">·</span>
+        <span>Oxfam</span>
+        <span class="dot">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-preview section-pad" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal-up">What We Do</div>
+        <h2 class="section-title reveal-up">Comprehensive Research<br /><span class="text-gradient">& Advisory Services</span></h2>
+        <p class="section-desc reveal-up">From field data collection to strategic advisory, we deliver end-to-end research solutions tailored to Southeast Asia's dynamic landscape.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-card" data-delay="0">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3>Market Research</h3>
+          <p>In-depth quantitative and qualitative market studies delivering actionable intelligence for investment and strategic decisions.</p>
+          <a href="services.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <div class="card-number">01</div>
+        </div>
+        <div class="service-card reveal-card" data-delay="0.1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+          </div>
+          <h3>Field Surveys</h3>
+          <p>On-ground data collection using ODK/CAPI digital systems across remote and urban communities with trained field teams.</p>
+          <a href="services.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <div class="card-number">02</div>
+        </div>
+        <div class="service-card reveal-card" data-delay="0.2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+          </div>
+          <h3>Data Analysis</h3>
+          <p>Advanced statistical modeling, data visualization, and reporting to turn raw data into clear, compelling insights.</p>
+          <a href="services.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <div class="card-number">03</div>
+        </div>
+        <div class="service-card reveal-card" data-delay="0.3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <h3>Monitoring & Evaluation</h3>
+          <p>Robust M&E frameworks tracking outputs, outcomes, and impact for development projects and social programs.</p>
+          <a href="services.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <div class="card-number">04</div>
+        </div>
+        <div class="service-card reveal-card" data-delay="0.4">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>Social Research</h3>
+          <p>Community profiling, gender studies, livelihoods analysis, and impact evaluations for NGOs and development agencies.</p>
+          <a href="services.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <div class="card-number">05</div>
+        </div>
+        <div class="service-card reveal-card" data-delay="0.5">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3>Feasibility Studies</h3>
+          <p>Business, investment, and project feasibility analyses providing evidence-based go/no-go recommendations.</p>
+          <a href="services.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <div class="card-number">06</div>
+        </div>
+      </div>
+      <div class="services-cta reveal-up">
+        <a href="services.html" class="btn btn-primary magnetic">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-section section-pad">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-left">
+          <div class="section-tag reveal-up">Why BridgeX</div>
+          <h2 class="section-title reveal-up">Local Expertise,<br /><span class="text-gradient">Global Standards</span></h2>
+          <p class="section-desc reveal-up">We combine deep regional knowledge with internationally recognized research methodologies to deliver reliable, actionable results.</p>
+          <a href="about.html" class="btn btn-outline magnetic reveal-up">About Our Team</a>
+          <div class="why-image-wrap reveal-scale">
+            <div class="why-image">
+              <div class="image-placeholder">
+                <div class="placeholder-orb"></div>
+                <div class="placeholder-grid"></div>
+                <div class="placeholder-text">Field Research<br />Excellence</div>
+              </div>
+            </div>
+            <div class="why-badge glass-card">
+              <div class="badge-icon">✓</div>
+              <div>
+                <strong>ISO-aligned</strong>
+                <span>Research Standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-right">
+          <div class="why-items">
+            <div class="why-item reveal-left" data-delay="0">
+              <div class="why-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div class="why-item-body">
+                <h4>Proven Track Record</h4>
+                <p>Over 150 successfully completed projects across Southeast Asia for international financial institutions and NGOs.</p>
+              </div>
+            </div>
+            <div class="why-item reveal-left" data-delay="0.1">
+              <div class="why-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <div class="why-item-body">
+                <h4>Rapid & Flexible</h4>
+                <p>We mobilize quickly and adapt to evolving research needs, delivering on tight timelines without compromising quality.</p>
+              </div>
+            </div>
+            <div class="why-item reveal-left" data-delay="0.2">
+              <div class="why-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064"/></svg>
+              </div>
+              <div class="why-item-body">
+                <h4>Deep Local Knowledge</h4>
+                <p>Specialist networks across Laos, Vietnam, Cambodia, and Myanmar providing authentic, culturally sensitive insights.</p>
+              </div>
+            </div>
+            <div class="why-item reveal-left" data-delay="0.3">
+              <div class="why-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div class="why-item-body">
+                <h4>Cost Effective</h4>
+                <p>Efficient operations and lean structure allow us to deliver high-quality research at competitive rates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section section-pad">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal-up">How We Work</div>
+        <h2 class="section-title reveal-up">Our Research <span class="text-gradient">Process</span></h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-line"></div>
+        <div class="process-step reveal-up" data-delay="0">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h4>Discovery & Scoping</h4>
+            <p>We define research objectives, target populations, and key deliverables with your team.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-up" data-delay="0.15">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h4>Design & Planning</h4>
+            <p>Methodology design, questionnaire development, sampling strategy, and field logistics planning.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-up" data-delay="0.3">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h4>Data Collection</h4>
+            <p>Trained field teams execute surveys using digital CAPI tools with real-time quality control.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-up" data-delay="0.45">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h4>Analysis & Insights</h4>
+            <p>Statistical analysis, data cleaning, cross-tabulations, and narrative reporting by senior analysts.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-up" data-delay="0.6">
+          <div class="step-num">05</div>
+          <div class="step-body">
+            <h4>Delivery & Debrief</h4>
+            <p>Final reports, presentations, and debrief sessions ensuring findings are fully actionable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="cta-particles" id="ctaParticles"></div>
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title reveal-up">Ready to Start Your<br /><span class="text-gradient">Research Project?</span></h2>
+        <p class="cta-desc reveal-up">Let's discuss how BridgeX Cooperation can deliver the insights you need to make confident decisions.</p>
+        <div class="cta-actions reveal-up">
+          <a href="contact.html" class="btn btn-primary magnetic btn-lg">Get in Touch</a>
+          <a href="services.html" class="btn btn-ghost magnetic btn-lg">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <span class="logo-mark">BX</span>
+              <span class="logo-text">BridgeX <em>Cooperation</em></span>
+            </a>
+            <p>Bridging data to decisions that matter. Research and advisory services across Southeast Asia.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="services.html">Market Research</a></li>
+              <li><a href="services.html">Field Surveys</a></li>
+              <li><a href="services.html">Data Analysis</a></li>
+              <li><a href="services.html">M&E</a></li>
+              <li><a href="services.html">Social Research</a></li>
+              <li><a href="services.html">Feasibility Studies</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html#team">Our Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <ul class="footer-contact">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Vientiane, Lao PDR
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                info@bridgexcoop.com
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                +856 21 000 000
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 BridgeX Cooperation. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
