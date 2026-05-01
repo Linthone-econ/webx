@@ -1,0 +1,157 @@
+/* ============================================================
+   BridgeX — Animations & Motion Effects
+   ============================================================ */
+
+/* Particle Canvas Overlay */
+.hero-canvas {
+  opacity: 0.55;
+  transition: opacity 0.5s;
+}
+
+/* Magnetic Button Ripple */
+.btn.magnetic {
+  transition: transform 0.3s cubic-bezier(0.23,1,0.32,1),
+              box-shadow 0.3s,
+              background 0.3s;
+}
+
+/* Hover Tilt Card */
+.service-card,
+.team-card,
+.coverage-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Shimmer loading bar */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.loader-progress {
+  background: linear-gradient(90deg,
+    #00c6ff 0%, #0072ff 30%, #7b2ff7 60%, #00c6ff 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+/* Text Splitting Chars (via JS) */
+.char-wrap {
+  overflow: hidden;
+  display: inline-block;
+}
+.char {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Noise Texture Overlay */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: overlay;
+}
+
+/* Gradient mesh orbs behind sections */
+.services-preview,
+.why-section {
+  position: relative;
+}
+.services-preview::before {
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 900px; height: 400px;
+  background: radial-gradient(ellipse at center, rgba(0,114,255,0.05), transparent);
+  pointer-events: none;
+}
+
+/* Stats count pulse */
+.stat-num,
+.m-stat-num {
+  display: inline-block;
+  animation-fill-mode: both;
+}
+
+/* Active nav link underline slide */
+.nav-link::after {
+  transform-origin: left center;
+}
+
+/* Card border glow on hover */
+.service-card::after {
+  content: '';
+  position: absolute; inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(0,198,255,0.25), transparent, rgba(0,114,255,0.2));
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+  z-index: -1;
+}
+.service-card:hover::after { opacity: 1; }
+
+/* Process step connector active state */
+.process-step.active .step-num {
+  background: linear-gradient(135deg, rgba(0,198,255,0.15), rgba(0,114,255,0.1));
+  border-color: var(--accent);
+}
+
+/* Section reveal stagger */
+.services-grid .service-card:nth-child(1) { transition-delay: 0s; }
+.services-grid .service-card:nth-child(2) { transition-delay: 0.08s; }
+.services-grid .service-card:nth-child(3) { transition-delay: 0.16s; }
+.services-grid .service-card:nth-child(4) { transition-delay: 0.24s; }
+.services-grid .service-card:nth-child(5) { transition-delay: 0.32s; }
+.services-grid .service-card:nth-child(6) { transition-delay: 0.40s; }
+
+.team-grid .team-card:nth-child(1) { transition-delay: 0s; }
+.team-grid .team-card:nth-child(2) { transition-delay: 0.1s; }
+.team-grid .team-card:nth-child(3) { transition-delay: 0.2s; }
+.team-grid .team-card:nth-child(4) { transition-delay: 0.3s; }
+
+.coverage-grid .coverage-card:nth-child(1) { transition-delay: 0s; }
+.coverage-grid .coverage-card:nth-child(2) { transition-delay: 0.1s; }
+.coverage-grid .coverage-card:nth-child(3) { transition-delay: 0.2s; }
+.coverage-grid .coverage-card:nth-child(4) { transition-delay: 0.3s; }
+
+/* Smooth gradient text animation */
+.text-gradient {
+  background-size: 200% auto;
+  animation: gradient-shift 4s ease infinite;
+}
+@keyframes gradient-shift {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* Hero badge pulse ring */
+.hero-badge::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50px;
+  border: 1px solid rgba(0,198,255,0.15);
+  animation: badge-ring 2s ease-in-out infinite;
+}
+@keyframes badge-ring {
+  0%,100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+.hero-badge { position: relative; }
+
+/* Marquee hover decelerate with blur edges */
+.marquee-track {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
+  mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
+}
+
+/* Mobile nav slide in */
+.nav-links {
+  transition: none;
+}
